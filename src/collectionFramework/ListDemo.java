@@ -12,6 +12,7 @@ public class ListDemo {
 
     static void main(String[] args) {
         List<String> user = new ArrayList<>();
+        System.out.println("List of Users");
         user.add("Alice");
         user.add("Bob");
         user.add("Carl");
