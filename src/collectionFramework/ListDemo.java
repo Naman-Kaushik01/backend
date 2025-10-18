@@ -14,7 +14,6 @@ public class ListDemo {
         List<String> user = new ArrayList<>();
         System.out.println("List of Users");
         user.add("Alice");
-        user.add("Bob");
         user.add("Carl");
         user.add("David");
 
