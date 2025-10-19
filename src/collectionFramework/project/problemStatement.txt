@@ -1,0 +1,12 @@
+COLLECTION FRAMEWORK
+
+PROJECT
+Build a system that:
+	-> Fetch Users from database
+	-> Each user has a unique role.
+
+We want to:
+->Remove all inactive users.
+->List all active users
+->Count users per role.
+
