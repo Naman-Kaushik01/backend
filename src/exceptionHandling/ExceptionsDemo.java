@@ -12,6 +12,8 @@ public class ExceptionsDemo {
 
         } catch (Exception e) {
             System.out.println(e);
+        }finally {
+            System.out.println("finally"); //finally will always execute
         }
         System.out.println("Done");
 
