@@ -2,6 +2,7 @@ package exceptionHandling;
 
 class Library{
     int availaibleBooks = 15;
+    int booksTaken = 4;
 
         //try - catch - finally
     public void borrowBooks(int bookRequested){
@@ -32,13 +33,27 @@ class Library{
         }
     }
 
+    //throws
 
+    public void returnBook(int returnBook) throws Exception{
+        if(returnBook < booksTaken){
+           throw new Exception("Unable to submit !! Return all books you had taken");
+        }if(returnBook > booksTaken){
+            throw new Exception("You can't submit books more than you taken");
+        }
+    }
 }
 public class LibraryDemo {
     static void main(String[] args) {
         Library library = new Library();
         library.borrowBooks(31);
         library.checkAvailaibility(15);
+
+        try {
+            library.returnBook(2);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
 
     }
 }
