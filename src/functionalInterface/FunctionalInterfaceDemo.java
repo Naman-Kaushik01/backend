@@ -24,7 +24,6 @@ public class FunctionalInterfaceDemo {
 
         BookAction action3 = () -> System.out.println("Action Performed");
 
-
     bookAction.bookAction();
     }
 }
