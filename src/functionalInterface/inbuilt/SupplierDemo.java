@@ -8,5 +8,6 @@ public class SupplierDemo {
         System.out.println(random.get());
         System.out.println(random.get());
         System.out.println(random.get());
+        System.out.println(random.get());
     }
 }
