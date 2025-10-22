@@ -5,6 +5,14 @@ interface BookAction {
     public void bookAction();
 }
 
+//Functional Interface with Parameters
+
+interface Operation{
+    int add(int a,int b);
+}
+
+
+
 public class FunctionalInterfaceDemo {
     static void main(String[] args) {
         //STEP 1
@@ -24,6 +32,14 @@ public class FunctionalInterfaceDemo {
 
         BookAction action3 = () -> System.out.println("Action Performed");
 
-    bookAction.bookAction();
+    Operation add = (int a,int b) ->{
+        System.out.println("add Operation Performed");
+        return a+b;
+    };
+    System.out.println(add.add(1,2));
+
+    //THREAD INTERFACE
+        new Thread(()->System.out.println("New Thread Created")).start();
+
     }
 }
