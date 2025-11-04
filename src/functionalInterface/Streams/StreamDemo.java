@@ -15,16 +15,24 @@ public class StreamDemo {
         Stream<String> stream = items.stream();
         stream.forEach(System.out::println);
 
-        //
-        System.out.println("--------------");
+        //WAY 1
+        System.out.println("------printing name starts with B--------");
         Stream<String> stream1 = items.stream();
        Stream<String> filterStream = stream1.filter(name -> name.startsWith("B"));
        filterStream.forEach(System.out::println);
 
-        System.out.println("--------------");
+        System.out.println("-------Printing name starts with A--------");
 
         // way 2
         items.stream().filter(name-> name.startsWith("A")).forEach(System.out::println);
 
+        /*
+        USE CASES
+        1.Filtering
+        2.Mapping
+        3.Aggregation
+        4.Searching
+        5.Iteration
+         */
     }
 }
