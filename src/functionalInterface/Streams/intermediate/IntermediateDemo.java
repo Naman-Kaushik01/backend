@@ -1,6 +1,7 @@
 package functionalInterface.Streams.intermediate;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
@@ -28,6 +29,12 @@ public class IntermediateDemo {
         Stream<String> upperCaseTitles = books.stream()
                 .map(b ->b.title.toUpperCase());
         upperCaseTitles.forEach(System.out::println);
+
+        //3. Sorting : Books by Publication Date
+        Stream <Book> sortedBooks = books.stream()
+                .sorted(Comparator.comparingInt(book-> book.publicationYear));
+        sortedBooks.forEach(System.out::println);
+
 
 
 
