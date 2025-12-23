@@ -25,6 +25,10 @@ public class IntermediateDemo {
         filteredBooks.forEach(System.out::println);
 
         // 2. Mapping: Convert book titles to uppercase
+        Stream<String> upperCaseTitles = books.stream()
+                .map(b ->b.title.toUpperCase());
+        upperCaseTitles.forEach(System.out::println);
+
 
 
 
