@@ -20,17 +20,22 @@ public class IntermediateDemo {
                 new Book("Old Man and the Sea", 1998, 9.99, "Fiction")
         );
         // 1. Filtering: Books cheaper than $20
-        Stream<Book> stream1 = books.stream();
-        Stream<Book> stream2 = stream1.filter(predicate);
-        stream2.forEach(System.out::println);
+        Stream<Book> filteredBooks = books.stream()
+                .filter(book -> book.price < 20);
+        filteredBooks.forEach(System.out::println);
+
+        // 2. Mapping: Convert book titles to uppercase
+
 
 
     }
-    static Predicate<Book> predicate = new Predicate<Book>() {
-        @Override
-        public boolean test(Book t) {
-            return t.price < 20;
-        }
-    };
+
+    // we can filter book by creating predicate like this also
+//    static Predicate<Book> predicate = new Predicate<Book>() {
+//        @Override
+//        public boolean test(Book t) {
+//            return t.price < 20;
+//        }
+//    };
 
 }
