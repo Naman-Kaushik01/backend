@@ -27,5 +27,13 @@ public class TerminalOperations {
                 .collect(Collectors.toSet());
         System.out.println("evenNumbersSet : " + evenNumbersSet);
 
+        //Find & match
+        numbers.stream().findFirst().ifPresent(System.out::println);
+        numbers.stream().findAny().ifPresent(System.out::println);
+
+        boolean has40 = numbers.stream()
+                .anyMatch(n -> n==40);
+        System.out.println(has40);
+
     }
 }
