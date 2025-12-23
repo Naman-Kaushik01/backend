@@ -35,5 +35,9 @@ public class TerminalOperations {
                 .anyMatch(n -> n==40);
         System.out.println(has40);
 
+        //iteration
+        numbers.stream()
+                .forEach(System.out::println);
+
     }
 }
