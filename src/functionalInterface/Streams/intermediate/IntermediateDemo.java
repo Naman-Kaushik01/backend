@@ -36,7 +36,6 @@ public class IntermediateDemo {
         sortedBooks.forEach(System.out::println);
 
         //4. Distinct : Remove duplicate titles
-
         Stream<Book> uniqueBooks = books.stream()
                 .distinct();
         uniqueBooks.forEach(System.out::println);
@@ -47,9 +46,10 @@ public class IntermediateDemo {
                 .limit(3);
         firstThreeBooks.forEach(System.out::println);
 
-
-
-
+        //6. Skip : Skip the first 2 books
+        Stream<Book> skipFirstTwoBooks = books.stream()
+                .skip(2);
+        skipFirstTwoBooks.forEach(System.out::println);
 
     }
 
