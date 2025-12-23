@@ -13,6 +13,38 @@ public class Book {
         this.category = category;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
+    public int getPublicationYear() {
+        return publicationYear;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setPublicationYear(int publicationYear) {
+        this.publicationYear = publicationYear;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
     @Override
     public String toString() {
         return "Book{" +
