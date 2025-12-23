@@ -6,7 +6,7 @@ import java.util.List;
 public class IntermediateDemo {
     public static void main(String[]args){
         List<Book> books = Arrays.asList(
-                new Book("The Silent Garden", 2018, 15.99, "Fiction"),
+                new Book("The Silent Garden", 2018, 17.99, "Fiction"),
                 new Book("Cosmic Wonders", 2020, 22.50, "Science"),
                 new Book("Echoes in the Rain", 2005, 12.75, "Fiction"),
                 new Book("A Life in Code", 2022, 18.00, "Biography"),
