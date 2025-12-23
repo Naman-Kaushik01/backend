@@ -2,6 +2,8 @@ package functionalInterface.Streams.intermediate;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 public class IntermediateDemo {
     public static void main(String[]args){
@@ -17,7 +19,18 @@ public class IntermediateDemo {
                 new Book("The Innovator's Journey", 2019, 16.99, "Biography"),
                 new Book("Old Man and the Sea", 1998, 9.99, "Fiction")
         );
+        // 1. Filtering: Books cheaper than $20
+        Stream<Book> stream1 = books.stream();
+        Stream<Book> stream2 = stream1.filter(predicate);
+        stream2.forEach(System.out::println);
+
 
     }
+    static Predicate<Book> predicate = new Predicate<Book>() {
+        @Override
+        public boolean test(Book t) {
+            return t.price < 20;
+        }
+    };
 
 }
