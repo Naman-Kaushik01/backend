@@ -35,6 +35,18 @@ public class IntermediateDemo {
                 .sorted(Comparator.comparingInt(book-> book.publicationYear));
         sortedBooks.forEach(System.out::println);
 
+        //4. Distinct : Remove duplicate titles
+
+        Stream<Book> uniqueBooks = books.stream()
+                .distinct();
+        uniqueBooks.forEach(System.out::println);
+
+        //5. Limit : Display only first three books
+        Stream<Book> firstThreeBooks = books.stream()
+                .sorted(Comparator.comparingInt(book -> book.publicationYear))
+                .limit(3);
+        firstThreeBooks.forEach(System.out::println);
+
 
 
 
