@@ -33,7 +33,38 @@ public class NullPointerExceptionDemo {
 
         //Get : if you are not sure that value is present or not don't use get
 
-        System.out.println(optionalString.get());
+        System.out.println(optionalString.get()); // if value will not availaible it will give exception
+
+        /*
+        How to retrieve value from optional safely ?
+        1. orElse()
+        2. orElseGet()
+        3. orElseThrow()
+         */
+
+        // orElse("default-value")
+        System.out.println(optionalString.orElse("Default Value"));
+        System.out.println(mayBe.orElse("Default value"));
+
+        //orElseGet(<supplier>)
+        String result = mayBe.orElseGet(()->{
+            System.out.println("Generating Default value");
+            return "Default value";
+        });
+        System.out.println(result);
+
+        String result2 = optionalString.orElseGet(()->{
+            System.out.println("Generating Default value");
+            return "Default value";
+        });
+        System.out.println(result2);
+
+        //orElseThrow() - return if value present or you can throw an exception too
+        String newResult = mayBe.orElseThrow(
+                () -> new RuntimeException("Not Found")
+        );
+        System.out.println(newResult);
+
 
 
     }
