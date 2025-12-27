@@ -24,6 +24,17 @@ public class NullPointerExceptionDemo {
         Optional<String> mayBe = Optional.ofNullable(null);
         System.out.println(mayBe);
 
+        //Checking Values
+        System.out.println(mayBe.isPresent());
+        System.out.println(optionalString.isPresent());
+
+        System.out.println(optionalString.isEmpty());
+        System.out.println(mayBe.isEmpty());
+
+        //Get : if you are not sure that value is present or not don't use get
+
+        System.out.println(optionalString.get());
+
 
     }
 }
