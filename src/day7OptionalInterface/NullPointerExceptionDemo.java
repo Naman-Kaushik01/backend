@@ -29,7 +29,7 @@ public class NullPointerExceptionDemo {
         System.out.println(mayBe.isPresent());
         System.out.println(mayBe.isEmpty());
 
-        //get : if not sure that value is present or not don't use get it will give exception
+        //get : if you are not sure that value is present or not don't use get it will give exception
         System.out.println(optionalString.get());
 
         /*How to retrieve value from optional safely ?
